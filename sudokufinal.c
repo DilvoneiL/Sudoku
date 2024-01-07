@@ -322,29 +322,29 @@ int main(){
       // que o usuario selecionar
       if(dificuldade==1){
        switch(radom){
-        case 1:select=fopen("facil_1.txt","r");  break;
-        case 2:select=fopen("facil_2.txt","r");  break;
-        case 3:select=fopen("facil_3.txt","r");  break;
-        case 4:select=fopen("facil_4.txt","r");  break;
-        case 5:select=fopen("facil_5.txt","r");  break;
+        case 1:select=fopen("dificuldade/facil_1.txt","r");  break;
+        case 2:select=fopen("dificuldade/facil_2.txt","r");  break;
+        case 3:select=fopen("dificuldade/facil_3.txt","r");  break;
+        case 4:select=fopen("dificuldade/facil_4.txt","r");  break;
+        case 5:select=fopen("dificuldade/facil_5.txt","r");  break;
       }
     }
       if(dificuldade==2){
         switch(radom){
-          case 1:select=fopen("medio_1.txt","r");  break;
-          case 2:select=fopen("medio_2.txt","r");  break;
-          case 3:select=fopen("medio_3.txt","r");  break;
-          case 4:select=fopen("medio_4.txt","r");  break;
-          case 5:select=fopen("medio_5.txt","r");  break;
+          case 1:select=fopen("dificuldade/medio_1.txt","r");  break;
+          case 2:select=fopen("dificuldade/medio_2.txt","r");  break;
+          case 3:select=fopen("dificuldade/medio_3.txt","r");  break;
+          case 4:select=fopen("dificuldade/medio_4.txt","r");  break;
+          case 5:select=fopen("dificuldade/medio_5.txt","r");  break;
         }
       }
      if(dificuldade==3){
         switch(radom){
-          case 1:select=fopen("dificil_1.txt","r");  break;
-          case 2:select=fopen("dificil_2.txt","r");  break;
-          case 3:select=fopen("dificil_3.txt","r");  break;
-          case 4:select=fopen("dificil_4.txt","r");  break;
-          case 5:select=fopen("dificil_5.txt","r");  break;
+          case 1:select=fopen("dificuldade/dificil_1.txt","r");  break;
+          case 2:select=fopen("dificuldade/dificil_2.txt","r");  break;
+          case 3:select=fopen("dificuldade/dificil_3.txt","r");  break;
+          case 4:select=fopen("dificuldade/dificil_4.txt","r");  break;
+          case 5:select=fopen("dificuldade/dificil_5.txt","r");  break;
         }
       }
      if(select == NULL) {
