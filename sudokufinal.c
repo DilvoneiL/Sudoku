@@ -156,7 +156,7 @@ int main(){
     */
     int linha ,coluna;
     int i,j,original[9][9];
-      FILE *inalteravel=fopen("ultimojogo.txt","r");
+      FILE *inalteravel=fopen("savegame/ultimojogo.txt","r");
       //matriz salva quando o jogador escolhe uma opcçao de dificuldade, seus valores difentetes de 0 nao podem ser alterados.
       if (inalteravel == NULL) {
         printf("\nERRO AO INICIAR.\n");
@@ -192,7 +192,7 @@ int main(){
     cria um arquivo e salva nele a matriz da mesma forma que o jogador parou de jogar.
     */
 
-      FILE *save = fopen("save.txt","w");//abre o arquivo
+      FILE *save = fopen("savegame/save.txt","w");//abre o arquivo
     if(save == NULL) {//verificar houve erro ao salvar o arquivo
     printf("\nERRO SAVE COMRROPIDO.\n");
     exit(1);
@@ -220,7 +220,7 @@ int main(){
     system("clear||cls");
     int i=0,j=0;
     int recebe[9][9];//matriz que foi salva pelo jogador
-    FILE *save=fopen("save.txt","r");
+    FILE *save=fopen("savegame/save.txt","r");
     if (save == NULL) {
       printf("\nERRO SAVE COMRROPIDO.\n");
       exit(1);
@@ -362,7 +362,7 @@ int main(){
       }
       fclose(select);
 
-      FILE *original = fopen("ultimojogo.txt","w");// salva um copia que nao vai ser alterada toda vez que o usuaria iniciar o jogo.
+      FILE *original = fopen("savegame/ultimojogo.txt","w");// salva um copia que nao vai ser alterada toda vez que o usuaria iniciar o jogo.
       if (original == NULL) {
         printf("\nERRO AO ABRIR.\n");
         exit(1);
@@ -531,7 +531,7 @@ int main(){
       printf(" %d minutos %d segundos\n",minutos,segundos);
       printf("\n");
       double recordes[3],aux;
-      FILE *openrecorde = fopen("recordes.txt","r");
+      FILE *openrecorde = fopen("savegame/recordes.txt","r");
       if(openrecorde==NULL){
         printf("Erro ao salvar o melhores tempos.\n");
       }
@@ -564,7 +564,7 @@ int main(){
         printf("TOP %d: [%lf]\n",cont,recordes[i] );
         cont++;
       }
-      FILE *arq = fopen("recordes.txt","w");//cria um arquivo para salvar os recordes
+      FILE *arq = fopen("savegame/recordes.txt","w");//cria um arquivo para salvar os recordes
       if(arq==NULL){
         printf("Erro ao salvar o melhores tempos.\n");
       }
@@ -574,7 +574,7 @@ int main(){
       fclose(arq);
     }
   else{
-    FILE *times = fopen("timesave.txt","w");//cria um arquivo para salvar os recordes
+    FILE *times = fopen("savegame/timesave.txt","w");//cria um arquivo para salvar os recordes
     if(times==NULL){
       printf("Erro ao salvar o melhores tempos.\n");
     }
